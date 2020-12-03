@@ -1,0 +1,2 @@
+  # .bashrc
+  module load innovus
