@@ -12,3 +12,7 @@ Then run:
 generateCapTbl -ict skywater130.nominal.ict -lef ../view-standard/rtk-tech.lef -output rtk-typical.captable
 ```
 This command takes several hours to run.
+Finally copy the generated file to the adk view:
+```
+cp rtk-typical.captable ../view-standard
+```
