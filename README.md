@@ -25,7 +25,7 @@ calibre-lvs.rule
 2. When you run this script `python3 create_view_standard.py`, it will:
     - Copy `rtk-tech.lef` from `SKYWATER130_HOME + '/libraries/sky130_fd_sc_hd/latest/tech/sky130_fd_sc_hd.tlef'`.
     - Copy `stdcells.lib` from `SKYWATER130_HOME + '/libraries/sky130_fd_sc_hd/latest/timing/sky130_fd_sc_hd__tt_025C_1v80.lib'`.
-    - Generate `stdcells.db` from `stdcells.lib`. The .db file is required by Design Compiler.
+    - Generate `stdcells.db` from `stdcells.lib`.
     - Generate `stdcells.lef` by concatenating the LEFs for all cells in `SKYWATER130_HOME + '/libraries/sky130_fd_sc_hd/latest/cells/'` into a single file.
 3. Next, go into the `generate_captable` folder, and follow the steps in its `README.md`. Generating captables takes several hours. This creates `rtk-typical.captable`.
 4. Once you have the captable, you can generate a Milkyway library. Go into the `generate_milkyway` folder, and follow the steps in its `README.md`. This generates `stdcells.mwlib` and `rtk-tech.tf`.
