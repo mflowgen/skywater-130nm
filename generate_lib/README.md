@@ -17,3 +17,9 @@ sed -i 's/physical_connection : "device_layer";//g' sky130_fd_sc_hd__tt_025C_1v8
 sed -i 's/VPB/vpb/g' sky130_fd_sc_hd__tt_025C_1v80.lib                                                                                            
 sed -i 's/VNB/vnb/g' sky130_fd_sc_hd__tt_025C_1v80.lib                                               
 ```
+
+Finally copy the lib file:
+```
+cp sky130_fd_sc_hd__tt_025C_1v80.lib ../generate_db
+cp sky130_fd_sc_hd__tt_025C_1v80.lib ../view-standard
+```
