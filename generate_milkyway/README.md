@@ -9,3 +9,4 @@ Then run Milkyway with the `generate_milkyway.tcl` script:
 ```
 Milkyway -tcl -nogui -galaxy -file generate_milkyway.tcl
 ```
+`exit` Milkyway once it completes.
