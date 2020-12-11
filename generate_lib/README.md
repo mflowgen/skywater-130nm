@@ -5,7 +5,7 @@ The lib file generated from the PDK does not work out of the box for db file gen
 * Replace `pg_type : "nwell";` with `pg_type : "primary_ground";`
 * Replace `pg_type : "pwell";` with `pg_type : "primary_power";`
 
-Innovus could not recognize buffers for CTS. To fix this we have to make the following change: make VNB and VPB lower case. 
+Moreover, Innovus could not recognize buffers for CTS. To fix this we have to make the following change in lib: make VNB and VPB lower case. 
 
 Run the following commands to make all of the above changes:
 ```
