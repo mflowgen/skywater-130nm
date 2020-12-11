@@ -21,5 +21,5 @@ sed -i 's/VNB/vnb/g' sky130_fd_sc_hd__tt_025C_1v80.lib                 
 Finally copy the lib file:
 ```
 cp sky130_fd_sc_hd__tt_025C_1v80.lib ../generate_db
-cp sky130_fd_sc_hd__tt_025C_1v80.lib ../view-standard
+cp sky130_fd_sc_hd__tt_025C_1v80.lib ../view-standard/stdcells.lib
 ```
