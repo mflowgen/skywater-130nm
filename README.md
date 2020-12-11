@@ -28,5 +28,5 @@ calibre-lvs.rule
 5. `python3 generate_sc_lef.py` generates `stdcells.lef` by concatenating the lef files for all cells in `SKYWATER130_HOME + '/libraries/sky130_fd_sc_hd/latest/cells/'` into a single file.
 6. Go into the `generate_captable` folder, and follow the steps in its `README.md`. Generating captables takes several hours. This creates `rtk-typical.captable`.
 7. Once you have the captable, you can generate a Milkyway library. Go into the `generate_milkyway` folder, and follow the steps in its `README.md`. This generates `stdcells.mwlib` and `rtk-tech.tf`.
-8. `rtk-stream-out.map` is copied from ``.
-9. `adk.tcl` is handwritten.
+8. `rtk-stream-out.map` is copied from https://foss-eda-tools.googlesource.com/skywater-pdk/libs/sky130_osu_sc/+/refs/heads/master/flow/pnr/streamOut.map.
+9. `adk.tcl` is handwritten looking at the lef and lib files.
