@@ -28,7 +28,7 @@ calibre-lvs.rule
 5. Similary `python3 generate_spi.py` generates `stdcells.spi` by concatenating the spice files for all cells.
 6. `python3 generate_cdl.py` generates `stdcells.cdl` by concatenating the cdl files for all cells.
 7. `python3 generate_verilog.py` generates `stdcells.v` by concatenating the Verilog files for all cells.
-8. Go into the `generate_db` folder, and follow the steps in its `README.md`. This generates `stdcells.db` from `stdcells.lib`.
+8. Go into the `generate_db` folder, and follow the steps in its `README.md` to generate `stdcells.db`.
 9. Go into the `generate_milkyway` folder, and follow the steps in its `README.md`. This generates `stdcells.mwlib` and `rtk-tech.tf`.
 10. Go into the `generate_captable` folder, and follow the steps in its `README.md`. Generating captables takes several hours. This creates `rtk-typical.captable`.
 11. `rtk-stream-out.map` is copied from https://foss-eda-tools.googlesource.com/skywater-pdk/libs/sky130_osu_sc/+/refs/heads/master/flow/pnr/streamOut.map.
