@@ -22,3 +22,6 @@ calibre-drc-block.rule
 calibre.layerprops
 calibre-lvs.rule
 ```
+Follow these steps to generate each of these files:
+0. 
+1. `rtk-tech.lef`
