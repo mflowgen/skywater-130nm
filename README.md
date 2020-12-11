@@ -11,7 +11,7 @@ calibre.layerprops
 calibre-lvs.rule
 calibre-lvs-devices.cdl
 calibre-lvs-hcells.inc
-pdk-typical-qrcTechFile
+rtk-typical.captable
 rtk-max.tluplus
 rtk-min.tluplus
 rtk-stream-out.map
