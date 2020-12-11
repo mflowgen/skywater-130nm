@@ -22,4 +22,9 @@ calibre-drc-block.rule
 calibre.layerprops
 calibre-lvs.rule
 ```
-1. Edit `create_view_standard.py` creates these files. ``rtk-tech.lef`: 
+
+# Steps
+1. Edit `SKYWATER130_HOME` in `create_view_standard.py` to point to the top folder of the skywater-pdk repository.
+2. When you run this script `python3 create_view_standard.py`, it will:
+    - Copy `rtk-tech.lef` from 
+    - Copy `stdcells.lib` from 
