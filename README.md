@@ -23,7 +23,7 @@ calibre-lvs.rule
 # Steps
 1. Edit `SKYWATER130_HOME` in `skywater_path.py` to point to the top folder of the skywater-pdk repository.
 2. `python3 generate_rtk_lef.py` copies technology lef file into `rtk-tech.lef`.  
-With the current version of the lef file, Innovus gives an error: `**ERROR: (IMPLF-121):   You need to have cut layer after layer 'pwell'.`. Manually add the `licon` layer after `pwell` layer definition in the lef file.
+With the current version of the lef file, Innovus gives an error: `**ERROR: (IMPLF-121):   You need to have cut layer after layer 'pwell'.`. Manually add the `licon` layer after `pwell` layer definition in `rtk-tech.lef`.
 ```
 LAYER licon
   TYPE CUT ;
