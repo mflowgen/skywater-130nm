@@ -1,1 +1,0 @@
-- `rtk-stream-out.map` was not available in skywater-pdk and was copied from https://foss-eda-tools.googlesource.com/skywater-pdk/libs/sky130_osu_sc/ at `sky130_osu_sc/flow/pnr/streamOut.map`.
