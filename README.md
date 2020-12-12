@@ -12,12 +12,13 @@ stdcells.db
 stdcells.mwlib
 rtk-tech.tf
 rtk-typical.captable
+stdcells.gds
 rtk-stream-out.map
 adk.tcl
-stdcells.gds
 calibre-drc-block.rule
 calibre.layerprops
 calibre-lvs.rule
+sky130.tech
 ```
 
 # Steps
@@ -37,6 +38,8 @@ END licon
 8. Go into the `generate_db` folder, and follow the steps in its `README.md` to generate `stdcells.db`.
 9. Go into the `generate_milkyway` folder, and follow the steps in its `README.md`. This generates `stdcells.mwlib` and `rtk-tech.tf`.
 10. Go into the `generate_captable` folder, and follow the steps in its `README.md`. Generating captables takes several hours. This creates `rtk-typical.captable`.
-11. `rtk-stream-out.map` is copied from https://foss-eda-tools.googlesource.com/skywater-pdk/libs/sky130_osu_sc/+/refs/heads/master/flow/pnr/streamOut.map.
-12. `adk.tcl` is handwritten looking at the lef and lib files.
-13. The final three calibre files are not available yet. We need to create some scripts that generate these files from the technology information in the PDK.
+11. `python3 generate_gds.py` copies all standard cell GDS's into a `stdcells.gds` directory in `view_standard`. Ideally, we would like to generate a merged GDS file. Takes a while to complete.
+12. `rtk-stream-out.map` is copied from https://foss-eda-tools.googlesource.com/skywater-pdk/libs/sky130_osu_sc/+/refs/heads/master/flow/pnr/streamOut.map.
+13. `adk.tcl` is handwritten looking at the lef and lib files.
+14. The final three calibre files are not available yet. We need to create some scripts that generate these files from the technology information in the PDK. 
+15. As an alternative, we are using magic to check DRCs. This requires a magic specific tech file `sky130.tech` which we have copied from https://foss-eda-tools.googlesource.com/skywater-pdk/libs/sky130_osu_sc/+/refs/heads/master/char/techfiles/sky130A.tech.
