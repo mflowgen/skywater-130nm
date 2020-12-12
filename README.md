@@ -23,7 +23,7 @@ calibre-lvs.rule
 # Steps
 1. Edit `SKYWATER130_HOME` in `skywater_path.py` to point to the top folder of the skywater-pdk repository.
 2. `python3 generate_rtk_lef.py` copies technology lef file into `rtk-tech.lef`.
-With the current version of the lef file, Innovus gives an error: `**ERROR: (IMPLF-121):   You need to have cut layer after layer 'pwell'.`. Manually comment the nwell and pweel layers for now, since they don't affect digital P&R.
+With the current version of the lef file, Innovus gives an error: `**ERROR: (IMPLF-121):   You need to have cut layer after layer 'pwell'.`. Manually comment the nwell and pwell layers for now, since they don't affect digital P&R.
 3. First run `python3 generate_lib.py` to copy typical lib file from the PDK. Then go into the `generate_lib` folder, and follow the steps in its `README.md`, since the copied lib file doesn't work out of the box with commercial tools.
 4. `python3 generate_sc_lef.py` generates `stdcells.lef` by concatenating the lef files for all cells in `SKYWATER130_HOME + '/libraries/sky130_fd_sc_hd/latest/cells/'` into a single file.
 5. Similary `python3 generate_spi.py` generates `stdcells.spi` by concatenating the spice files for all cells.
