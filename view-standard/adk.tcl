@@ -24,7 +24,7 @@ set ADK_PROCESS 130
 set ADK_MIN_ROUTING_LAYER_DC met2
 set ADK_MAX_ROUTING_LAYER_DC met5
 
-set ADK_MAX_ROUTING_LAYER_INNOVUS 5
+set ADK_MAX_ROUTING_LAYER_INNOVUS 6
 
 #-------------------------------------------------------------------------
 # Power mesh layers
@@ -37,8 +37,8 @@ set ADK_MAX_ROUTING_LAYER_INNOVUS 5
 # direction of the power rails in the stdcells. This allows Innovus to
 # stamp stacked vias down at each intersection.
 
-set ADK_POWER_MESH_BOT_LAYER 4
-set ADK_POWER_MESH_TOP_LAYER 5
+set ADK_POWER_MESH_BOT_LAYER 5
+set ADK_POWER_MESH_TOP_LAYER 6
 
 #-------------------------------------------------------------------------
 # ADK_DRIVING_CELL
