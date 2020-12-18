@@ -30,15 +30,15 @@ LAYER licon
   TYPE CUT ;
 END licon 
 ```
-4. First run `python3 generate_lib.py` to copy typical lib file from the PDK. Then go into the `generate_lib` folder, and follow the steps in its `README.md`, since the copied lib file doesn't work out of the box with commercial tools.
-5. `python3 generate_sc_lef.py` generates `stdcells.lef` by concatenating the lef files for all cells in `SKYWATER130_HOME + '/libraries/sky130_fd_sc_hd/latest/cells/'` into a single file.
-6. Similary `python3 generate_spi.py` generates `stdcells.spi` by concatenating the spice files for all cells.
-7. `python3 generate_cdl.py` generates `stdcells.cdl` by concatenating the cdl files for all cells.
-8. `python3 generate_verilog.py` generates `stdcells.v` by concatenating the Verilog files for all cells.
-9. Go into the `generate_db` folder, and follow the steps in its `README.md` to generate `stdcells.db`.
-10. Go into the `generate_milkyway` folder, and follow the steps in its `README.md`. This generates `stdcells.mwlib` and `rtk-tech.tf`.
-11. `python3 generate_gds.py` copies all standard cell GDS's into a `stdcells.gds` directory in `view_standard`. Ideally, we would like to generate a merged GDS file. Takes a while to complete.
-12. `rtk-stream-out.map` is copied from https://foss-eda-tools.googlesource.com/skywater-pdk/libs/sky130_osu_sc/+/refs/heads/master/flow/pnr/streamOut.map.
-13. `adk.tcl` is handwritten looking at the lef and lib files.
-14. The final three calibre files are not available yet. We need to create some scripts that generate these files from the technology information in the PDK. 
-15. As an alternative, we are using magic to check DRCs, and extract a SPICE netlist from the layout and netgen for LVS. Magic needs a `.magicrc` file to be in the folder from which magic is invoked, and a `.tech` file. Netgen needs also needs a setup files. We will get these files from the `open_pdks` repo.
+5. First run `python3 generate_lib.py` to copy typical lib file from the PDK. Then go into the `generate_lib` folder, and follow the steps in its `README.md`, since the copied lib file doesn't work out of the box with commercial tools.
+6. `python3 generate_sc_lef.py` generates `stdcells.lef` by concatenating the lef files for all cells in `SKYWATER130_HOME + '/libraries/sky130_fd_sc_hd/latest/cells/'` into a single file.
+7. Similary `python3 generate_spi.py` generates `stdcells.spi` by concatenating the spice files for all cells.
+8. `python3 generate_cdl.py` generates `stdcells.cdl` by concatenating the cdl files for all cells.
+9. `python3 generate_verilog.py` generates `stdcells.v` by concatenating the Verilog files for all cells.
+10. Go into the `generate_db` folder, and follow the steps in its `README.md` to generate `stdcells.db`.
+11. Go into the `generate_milkyway` folder, and follow the steps in its `README.md`. This generates `stdcells.mwlib` and `rtk-tech.tf`.
+12. `python3 generate_gds.py` copies all standard cell GDS's into a `stdcells.gds` directory in `view_standard`. Ideally, we would like to generate a merged GDS file. Takes a while to complete.
+13. `rtk-stream-out.map` is copied from https://foss-eda-tools.googlesource.com/skywater-pdk/libs/sky130_osu_sc/+/refs/heads/master/flow/pnr/streamOut.map.
+14. `adk.tcl` is handwritten looking at the lef and lib files.
+15. The final three calibre files are not available yet. We need to create some scripts that generate these files from the technology information in the PDK. 
+16. As an alternative, we are using magic to check DRCs, and extract a SPICE netlist from the layout and netgen for LVS. Magic needs a `.magicrc` file to be in the folder from which magic is invoked, and a `.tech` file. Netgen needs also needs a setup files. We will get these files from the `open_pdks` repo.
