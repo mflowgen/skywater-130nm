@@ -18,7 +18,6 @@ adk.tcl
 calibre-drc-block.rule
 calibre.layerprops
 calibre-lvs.rule
-sky130.tech
 ```
 
 # Steps
