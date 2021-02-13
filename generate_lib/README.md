@@ -5,15 +5,7 @@ The lib file generated from the PDK does not work out of the box, and several ch
 * Swap `pg_type : "nwell";` and `pg_type : "pwell";`
 * Fix all errors mentioned here : https://github.com/google/skywater-pdk/issues/183
 
-2. Innovus could not recognize buffers for CTS. To fix this we have to make the following change in lib: make VNB and VPB lower case. 
-
-Run the following commands to make all of the above changes:
-``` 
-sed -i 's/VPB/vpb/g' sky130_fd_sc_hd__tt_025C_1v80.lib                                                                                            
-sed -i 's/VNB/vnb/g' sky130_fd_sc_hd__tt_025C_1v80.lib                                               
-```
-
-3. There is a warning in DC: `Warning: The 'sky130_fd_sc_hd__macro_sparecell' cell in the 'sky130_fd_sc_hd__tt_025C_1v80' technology library does not have corresponding physical cell description. (PSYN-024)`, that causes an assertion to fail in mflowgen. So remove this cell manually from the lib.
+2. There is a warning in DC: `Warning: The 'sky130_fd_sc_hd__macro_sparecell' cell in the 'sky130_fd_sc_hd__tt_025C_1v80' technology library does not have corresponding physical cell description. (PSYN-024)`, that causes an assertion to fail in mflowgen. So remove this cell manually from the lib.
 
 Finally copy the lib file:
 ```
