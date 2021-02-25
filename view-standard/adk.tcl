@@ -61,7 +61,7 @@ set ADK_DRIVING_CELL "sky130_fd_sc_hd__inv_2"
 # The stdcell lib shows about 9fF for an inverter x4, so about 9fF is
 # reasonable.
 
-set ADK_TYPICAL_ON_CHIP_LOAD 9
+set ADK_TYPICAL_ON_CHIP_LOAD 0.009
 
 #-------------------------------------------------------------------------
 # ADK_FILLER_CELLS
