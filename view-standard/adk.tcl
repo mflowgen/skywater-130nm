@@ -53,10 +53,10 @@ set ADK_DRIVING_CELL "sky130_fd_sc_hd__inv_2"
 #-------------------------------------------------------------------------
 # ADK_TYPICAL_ON_CHIP_LOAD
 #-------------------------------------------------------------------------
-# Our default timing constraints assume that we are driving another block
-# of on-chip logic. Select how much load capacitance in picofarads we
-# should drive here. This is the load capacitance that the output pins of
-# the block will expect to be driving.
+# Our default timing constraints assume that we are driving another block of
+# on-chip logic. Select how much load capacitance (in the same units as the
+# lib/db) we should drive here. This is the load capacitance that the output
+# pins of the block will expect to be driving.
 #
 # The stdcell lib shows about 9fF for an inverter x4, so about 9fF is
 # reasonable.
