@@ -22,7 +22,13 @@ calibre-lvs.rule
 
 # Steps
 1. Edit `SKYWATER130_HOME` in `skywater_path.py` to point to the top folder of the skywater-pdk repository.
-2. `python3 generate_rtk_lef.py` copies technology lef file into `rtk-tech.lef`.  
+2. `python3 generate_rtk_lef.py` copies technology lef file into `rtk-tech.lef`. Edit this file to add these lines after the last metal layer, otherwise LEF generation in Innovus complains.
+```
+LAYER OVERLAP
+  TYPE OVERLAP ;
+END OVERLAP
+
+```
 3. Go into the `generate_captable` folder, and follow the steps in its `README.md`. Generating captables takes several hours. This creates `rtk-typical.captable`.
 4. With the current version of the lef file, Innovus gives an error: `**ERROR: (IMPLF-121):   You need to have cut layer after layer 'pwell'.`. Manually add the `licon` layer after `pwell` layer definition in `rtk-tech.lef`. Captable generation fails with this change, so we should do that earlier. This is really hacky, and should be fixed properly.
 ```

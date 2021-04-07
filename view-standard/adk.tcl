@@ -158,10 +158,10 @@ set ADK_VIRTUOSO_EXCLUDE_CELL_LIST \
 # commercial tools do. In this section we define extra variables for them.
 
 # FIXME
-set ADK_TIE_HI_CELL ""
-set ADK_TIE_LO_CELL ""
-set ADK_TIE_HI_PORT ""
-set ADK_TIE_LO_PORT ""
+set ADK_TIE_HI_CELL "sky130_fd_sc_hd__conb_1"
+set ADK_TIE_LO_CELL "sky130_fd_sc_hd__conb_1"
+set ADK_TIE_HI_PORT "HI"
+set ADK_TIE_LO_PORT "LO"
 
 set ADK_MIN_BUF_CELL   "sky130_fd_sc_hd__buf_1"
 set ADK_MIN_BUF_PORT_I "A"
