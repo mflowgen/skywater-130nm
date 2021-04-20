@@ -26,6 +26,8 @@ set ADK_MAX_ROUTING_LAYER_DC met5
 
 set ADK_MAX_ROUTING_LAYER_INNOVUS 6
 
+set ADK_BASE_LAYER_IDX 1
+
 #-------------------------------------------------------------------------
 # Power mesh layers
 #-------------------------------------------------------------------------
