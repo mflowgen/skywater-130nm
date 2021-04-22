@@ -55,5 +55,5 @@ END licon
 cp /afs/ir.stanford.edu/class/ee272/PDKS/sky130A/libs.tech/magic/current/sky130A.magicrc view-standard/magicrc
 cp /afs/ir.stanford.edu/class/ee272/PDKS/sky130A/libs.tech/magic/current/sky130A.tcl view-standard
 cp /afs/ir.stanford.edu/class/ee272/PDKS/sky130A/libs.tech/magic/current/sky130A.tech view-standard
-cp /afs/ir.stanford.edu/class/ee272/PDKS/sky130A/libs.tech/netgen/sky130A_setup.tcl view-standard/netgen_setup.tcl
+cp /afs/ir.stanford.edu/class/ee272/PDKS/sky130A/libs.tech/netgen/sky130A_setup.tcl view-standard/netgen-setup.tcl
 ```
