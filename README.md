@@ -52,8 +52,8 @@ END licon
 15. The final three calibre files are not available yet. We need to create some scripts that generate these files from the technology information in the PDK. 
 16. As an alternative, we are using magic to check DRCs, and extract a SPICE netlist from the layout and netgen for LVS. Magic needs a `.magicrc` file to be in the folder from which magic is invoked, and a `.tech` file. Netgen also needs a setup file. We will get these files from the `open_pdks` repo.
 ```
-cp /afs/ir.stanford.edu/class/ee272/PDKS/sky130A/libs.tech/magic/current/sky130A.magicrc view-standard
+cp /afs/ir.stanford.edu/class/ee272/PDKS/sky130A/libs.tech/magic/current/sky130A.magicrc view-standard/magicrc
 cp /afs/ir.stanford.edu/class/ee272/PDKS/sky130A/libs.tech/magic/current/sky130A.tcl view-standard
 cp /afs/ir.stanford.edu/class/ee272/PDKS/sky130A/libs.tech/magic/current/sky130A.tech view-standard
-cp /afs/ir.stanford.edu/class/ee272/PDKS/sky130A/libs.tech/netgen/sky130A_setup.tcl view-standard
+cp /afs/ir.stanford.edu/class/ee272/PDKS/sky130A/libs.tech/netgen/sky130A_setup.tcl view-standard/netgen-setup.tcl
 ```
