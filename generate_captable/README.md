@@ -4,7 +4,6 @@ The ICT file is not available in the skywater-pdk repository. It is copied from 
 
 First make sure that you load the innovus module:
 ```
-bash
 module load innovus
 ```
 Then run:

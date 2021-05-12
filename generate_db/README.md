@@ -1,7 +1,6 @@
 Generation of db file requires Library Compiler.
 First load the modules to run this tool:
 ```
-bash
 module load base
 module load lc
 ```
