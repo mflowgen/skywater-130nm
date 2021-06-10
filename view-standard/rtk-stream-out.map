@@ -40,7 +40,7 @@ met4		PIN		71		16
 met4		FILL		71		20
 met4		VIA		71		20
 met4		VIAFILL		71		20
-NAME		met4/PIN	71 		16
+#NAME		met4/PIN	71 		16
 NAME		met4/SPNET	71 		16
 
 met5		NET		72		20
@@ -49,7 +49,7 @@ met5		PIN		72		16
 met5		FILL		72		20
 met5		VIA		72		20
 met5		VIAFILL		72		20
-NAME		met5/PIN	72 		16
+#NAME		met5/PIN	72 		16
 NAME		met5/SPNET	72 		16
 
 mcon 		VIA		67		44
