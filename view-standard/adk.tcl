@@ -136,7 +136,6 @@ set ADK_ANTENNA_CELL "sky130_fd_sc_hd__diode_2"
 
 set ADK_LVS_EXCLUDE_CELL_LIST \
   "sky130_fd_sc_hd__fill_* \
-   sky130_fd_sc_hd__decap_* \
    sky130_fd_sc_hd__tapvpwrvgnd_1"
 
 #-------------------------------------------------------------------------
@@ -154,7 +153,6 @@ set ADK_LVS_EXCLUDE_CELL_LIST \
 
 set ADK_VIRTUOSO_EXCLUDE_CELL_LIST \
   "sky130_fd_sc_hd__fill_* \
-   sky130_fd_sc_hd__decap_* \
    sky130_fd_sc_hd__tapvpwrvgnd_1"
 
 #-------------------------------------------------------------------------
