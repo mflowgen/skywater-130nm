@@ -51,10 +51,12 @@ module load calibre
 13. `rtk-stream-out.map` is copied from https://foss-eda-tools.googlesource.com/skywater-pdk/libs/sky130_osu_sc/+/refs/heads/master/flow/pnr/streamOut.map.
 14. `adk.tcl` is handwritten looking at the lef and lib files.
 15. The final three calibre files are not available yet. We need to create some scripts that generate these files from the technology information in the PDK. 
-16. As an alternative, we are using magic to check DRCs, and extract a SPICE netlist from the layout and netgen for LVS. Magic needs a `.magicrc` file to be in the folder from which magic is invoked, and a `.tech` file. Netgen also needs a setup file. We will get these files from the `open_pdks` repo.
+16. As an alternative, we are using magic to check DRCs, and extract a SPICE netlist from the layout and netgen for LVS. Magic needs a `.magicrc` file to be in the folder from which magic is invoked, and a `.tech` file. Netgen also needs a setup file. We will get these files from the `open_pdks` repo. 
 ```
-cp /afs/ir.stanford.edu/class/ee272/PDKS/sky130A/libs.tech/magic/sky130A.magicrc view-standard/magicrc
-cp /afs/ir.stanford.edu/class/ee272/PDKS/sky130A/libs.tech/magic/sky130A.tcl view-standard
-cp /afs/ir.stanford.edu/class/ee272/PDKS/sky130A/libs.tech/magic/sky130A.tech view-standard
-cp /afs/ir.stanford.edu/class/ee272/PDKS/sky130A/libs.tech/netgen/sky130A_setup.tcl view-standard/netgen-setup.tcl
+cp /farmshare/classes/ee/272/PDKs/share/pdk/sky130A/libs.tech/magic/sky130A.magicrc view-standard/magicrc
+cp /farmshare/classes/ee/272/PDKs/share/pdk/sky130A/libs.tech/magic/sky130A.tcl view-standard
+cp /farmshare/classes/ee/272/PDKs/share/pdk/sky130A/libs.tech/magic/sky130A.tech view-standard
+cp /farmshare/classes/ee/272/PDKs/share/pdk/sky130A/libs.tech/netgen/sky130A_setup.tcl view-standard/netgen-setup.tcl
 ```
+Note the path is different in the native farmshare machine and the CentOS container. We need to be in the CentOS environment.
+There may be a way to skip the `share/pdk` directories when generating with `open_pdks`. We cannot simply move the directory since the path is coded in the files. We should fix this next time.
