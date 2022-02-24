@@ -46,7 +46,8 @@ set OPEN_PDKS_ROOT = /farmshare/classes/ee/272/PDKs/share/pdk
 cp ${OPEN_PDKS_ROOT}/sky130A/libs.tech/magic/sky130A.magicrc view-standard/magicrc
 cp ${OPEN_PDKS_ROOT}/sky130A/libs.tech/magic/sky130A.tcl view-standard
 cp ${OPEN_PDKS_ROOT}/sky130A/libs.tech/magic/sky130A.tech view-standard
-cp ${OPEN_PDKS_ROOT}/sky130A/libs.tech/netgen/sky130A_setup.tcl view-standard/netgen-setup.tcl
+cp ${OPEN_PDKS_ROOT}/sky130A/libs.tech/netgen/sky130A_setup.tcl view-standard/netgen_setup.tcl
 ```
 TODO: A new Singularity container will be built after the quarter to align the paths in the native farmshare machine and the container. Will need to update this path.
+
 There may be a way to skip the `share/pdk` directories when generating with `open_pdks`. We cannot simply move the directory since the path is coded in the files. We should fix this next time.
