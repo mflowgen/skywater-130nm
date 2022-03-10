@@ -1,9 +1,9 @@
 from shutil import copyfile
 from glob import glob
 from utils import *
-from skywater_path import *
 import os 
 
+SKYWATER130_HOME = os.environ['SKYWATER130_HOME']
 cell_dirs = glob(SKYWATER130_HOME + "/libraries/sky130_fd_sc_hd/latest/cells/*/")
 
 if(~os.path.isdir("stdcellsgds")):

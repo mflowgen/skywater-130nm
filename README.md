@@ -21,7 +21,7 @@ stdcells.v
 ```
 
 # Steps
-1. Edit `SKYWATER130_HOME` in `skywater_path.py` to point to the top folder of the skywater-pdk repository.
+1. Edit `SKYWATER130_HOME` and `OPEN_PDKS_ROOT` in `setenv.csh` to point to the top folder of the skywater-pdk repository and open_pdks generated files.
 2. `python3 generate_rtk_lef.py` copies technology lef file into `rtk-tech.lef`. LEF generation in Innovus requires OVERLAP layer, and a cut layer is required between the non-routing layers (nwell/pwell/poly) and local interconnect. Edit this file following the changes mentioned in this PR: https://github.com/google/skywater-pdk-libs-sky130_fd_sc_hd/pull/5.
 3. Go into the `generate_captable` folder, and follow the steps in its `README.md`. Generating captables takes several hours. This creates `rtk-typical.captable`.
 4. Run `python3 generate_lib.py` to copy typical lib file from the PDK. Then go into the `generate_lib` folder, and follow the steps in its `README.md`, since the copied lib file doesn't work out of the box with commercial tools.
@@ -34,7 +34,7 @@ stdcells.v
 11. Run `python3 generate_gds.py` to copy all standard cell GDS's into a `stdcellsgds` directory. This takes a while (minutes) to complete. Then run the following command to create a merged GDS file.
 ```
 module load calibre
-/cad/mentor/2019.1/aoi_cal_2019.1_18.11/bin/calibredrv -a layout filemerge -indir stdcellsgds -out view-standard/stdcells.gds
+calibredrv -a layout filemerge -indir stdcellsgds -out view-standard/stdcells.gds
 ```
 12. `rtk-stream-out.map` in the `view-standard` directory is copied from https://foss-eda-tools.googlesource.com/skywater-pdk/libs/sky130_osu_sc/+/refs/heads/master/flow/pnr/streamOut.map.
 13. `adk.tcl` is handwritten looking at the lef and lib files.
@@ -42,7 +42,6 @@ module load calibre
     - The final three calibre files are not available yet. We need to create some scripts that generate these files from the technology information in the PDK. 
     - As an alternative, we are using magic to check DRCs, and extract a SPICE netlist from the layout and netgen for LVS. Magic needs a `.magicrc` file to be in the folder from which magic is invoked, and a `.tech` file. Netgen also needs a setup file. We will get these files from the `open_pdks` repo. 
 ```
-set OPEN_PDKS_ROOT = /farmshare/classes/ee/272/PDKs/share/pdk
 cp ${OPEN_PDKS_ROOT}/sky130A/libs.tech/magic/sky130A.magicrc view-standard/magicrc
 cp ${OPEN_PDKS_ROOT}/sky130A/libs.tech/magic/sky130A.tcl view-standard
 cp ${OPEN_PDKS_ROOT}/sky130A/libs.tech/magic/sky130A.tech view-standard

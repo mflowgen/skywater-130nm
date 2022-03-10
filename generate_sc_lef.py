@@ -1,6 +1,7 @@
 from glob import glob
-from skywater_path import *
+import os
 
+SKYWATER130_HOME = os.environ['SKYWATER130_HOME']
 cell_dirs = glob(SKYWATER130_HOME + "/libraries/sky130_fd_sc_hd/latest/cells/*/")
 
 def write_concat_lef_file(outfilename, infilenames):
@@ -30,5 +31,6 @@ for cell_dir in cell_dirs:
 
     # LEF file for each size
     infilenames = infilenames + glob(cell_dir+libname+'__'+cellname+'_*.magic.lef')
-
+    # this concats the .lef files. But so far seems like .magic.lef is better.
+    # infilenames = infilenames + [f for f in glob(cell_dir+libname+'__'+cellname+'_*.lef') if os.path.basename(f).find("magic") == -1]
 write_concat_lef_file(outfilename, infilenames)
