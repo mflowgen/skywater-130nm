@@ -1,3 +1,2 @@
-setenv SKYWATER130_HOME '/farmshare/classes/ee/272/skywater-pdk'
-setenv OPEN_PDKS_ROOT   '/farmshare/classes/ee/272/PDKs'
-
+setenv PDKS_ROOT         /farmshare/home/classes/ee/272/PDKs
+setenv SKYWATER130_HOME  ${PDKS_ROOT}/sky130A

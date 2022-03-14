@@ -1,18 +1,21 @@
 from glob import glob
+from shutil import copyfile
 from utils import *
 import os
 
 SKYWATER130_HOME = os.environ['SKYWATER130_HOME']
-cell_dirs = glob(SKYWATER130_HOME + "/libraries/sky130_fd_sc_hd/latest/cells/*/")
+copyfile(SKYWATER130_HOME + '/libs.ref/sky130_fd_sc_hd/spice/sky130_fd_sc_hd.spice', 'view-standard/stdcells.spi')
 
-outfilename = 'view-standard/stdcells.spi'
-infilenames = []
+# cell_dirs = glob(SKYWATER130_HOME + "/libraries/sky130_fd_sc_hd/latest/cells/*/")
 
-for cell_dir in cell_dirs:
-    libname = cell_dir.split('/')[-5]
-    cellname = cell_dir.split('/')[-2]
+# outfilename = 'view-standard/stdcells.spi'
+# infilenames = []
 
-    # Spice file for each size
-    infilenames = infilenames + glob(cell_dir+libname+'__'+cellname+'_*.spice')
+# for cell_dir in cell_dirs:
+#     libname = cell_dir.split('/')[-5]
+#     cellname = cell_dir.split('/')[-2]
 
-write_concat_file(outfilename, infilenames)
+#     # Spice file for each size
+#     infilenames = infilenames + glob(cell_dir+libname+'__'+cellname+'_*.spice')
+
+# write_concat_file(outfilename, infilenames)
