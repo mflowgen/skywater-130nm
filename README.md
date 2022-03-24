@@ -29,6 +29,10 @@ stdcells.v
 6. Run `python3 generate_spi.py` to generate `stdcells.spi` by copying the open_pdks version.
 7. Run `python3 generate_cdl.py` to generate `stdcells.cdl` by copying the open_pdks version.
 8. Run `python3 generate_verilog.py` to generate `stdcells.v` by copying the open_pdks stdcells and primitives verilog files.
+   - Gate-level VCS simulation fails with the error message `Identifier 'SET' has not been declared yet. If this error is not expected, please check if you have set \`default_nettype to none.` Temporarily fixing the issue by removing those statements from `primitives.v`.
+   ```
+   sed -i 's/`default_nettype none//g' view-stanfard/primitives.v
+   ```
 9. Go into the `generate_db` folder, and follow the steps in its `README.md` to generate `stdcells.db`.
 10. Go into the `generate_milkyway` folder, and follow the steps in its `README.md`. This generates `stdcells.mwlib` and `rtk-tech.tf`.
 11. Run `python3 generate_gds.py` to generate `stdcells.gds` by copying the open_pdks version.
@@ -36,10 +40,8 @@ stdcells.v
 13. `adk.tcl` is handwritten looking at the lef and lib files.
 14. The final files relate to Calibre and Magic to Check DRC and LVS:
     - The final three calibre files are not available yet. We need to create some scripts that generate these files from the technology information in the PDK. 
-    - As an alternative, we are using magic to check DRCs, and extract a SPICE netlist from the layout and netgen for LVS. Magic needs a `.magicrc` file to be in the folder from which magic is invoked, and a `.tech` file. Netgen also needs a setup file. We will get these files from the open_pdks folder. 
+    - As an alternative, we are using magic to check DRCs, and extract a SPICE netlist from the layout and netgen for LVS. Magic needs a `.magicrc` file to be in the folder from which magic is invoked. Netgen also needs a setup file. We will get these files from the open_pdks folder. 
 ```
-cp ${SKYWATER130_HOME}/libs.tech/magic/sky130A.magicrc view-standard/.magicrc
-cp ${SKYWATER130_HOME}/libs.tech/magic/sky130A.tcl view-standard
-cp ${SKYWATER130_HOME}/libs.tech/magic/sky130A.tech view-standard
+cp ${SKYWATER130_HOME}/libs.tech/magic/sky130A.magicrc view-standard/magicrc
 cp ${SKYWATER130_HOME}/libs.tech/netgen/sky130A_setup.tcl view-standard/netgen_setup.tcl
 ```
