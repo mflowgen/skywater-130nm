@@ -31,7 +31,7 @@ stdcells.v
 8. Run `python3 generate_verilog.py` to generate `stdcells.v` by copying the open_pdks stdcells and primitives verilog files.
    - Gate-level VCS simulation fails with the error message `Identifier 'SET' has not been declared yet. If this error is not expected, please check if you have set \`default_nettype to none.` Temporarily fixing the issue by removing those statements from `primitives.v`.
    ```
-   sed -i 's/`default_nettype none//g' view-stanfard/primitives.v
+   sed -i 's/`default_nettype none//g' view-standard/primitives.v
    ```
 9. Go into the `generate_db` folder, and follow the steps in its `README.md` to generate `stdcells.db`.
 10. Go into the `generate_milkyway` folder, and follow the steps in its `README.md`. This generates `stdcells.mwlib` and `rtk-tech.tf`.
