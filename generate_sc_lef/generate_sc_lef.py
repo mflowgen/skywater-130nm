@@ -3,7 +3,10 @@ from shutil import copyfile
 import os
 
 SKYWATER130_HOME = os.environ['SKYWATER130_HOME']
-copyfile(SKYWATER130_HOME + '/libs.ref/sky130_fd_sc_hd/lef/sky130_fd_sc_hd.lef', 'view-standard/stdcells.lef')
+TOP = os.environ['TOP']
+SC_LEF = TOP + '/view-standard/stdcells.lef'
+
+copyfile(SKYWATER130_HOME + '/libs.ref/sky130_fd_sc_hd/lef/sky130_fd_sc_hd.lef', SC_LEF)
 
 # cell_dirs = glob(SKYWATER130_HOME + "/libraries/sky130_fd_sc_hd/latest/cells/*/")
 

@@ -1,6 +1,6 @@
 from shutil import copyfile
 from glob import glob
-from utils import *
+# from utils import *
 import os 
 
 SKYWATER130_HOME = os.environ['SKYWATER130_HOME']
