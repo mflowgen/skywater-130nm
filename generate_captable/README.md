@@ -2,7 +2,9 @@ Innovus has a utility called generateCapTbl which takes the technology LEF file 
 
 The ICT file is not available in the skywater-pdk repository. It is copied from this issue: https://github.com/google/skywater-pdk/issues/187#issuecomment-718312348 and put in skywater130.nominal.ict.
 
-First make sure that you load the innovus module:
+The below steps are covered in the `make captable` command, which calls `generate_captable.sh`.
+
+First make sure the innovus module is loaded:
 ```
 module load innovus
 ```

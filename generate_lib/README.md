@@ -1,7 +1,7 @@
-The lib file generated from the PDK does not work out of the box, and several changes are required.
+The lib file generated from the PDK does not work out of the box, and several changes are required. These changes are automated by the `generate_lib.sh` and `generate_lib.py` scripts.
 
 For for db file generation:
-1. Fix the errors reported here: https://github.com/google/skywater-pdk/issues/288 . (Perhaps there is an easier way, but I used sed:)
+1. Fix the errors reported here: https://github.com/google/skywater-pdk/issues/288 .
 * Swap `related_bias_pin : "VPB";` and `related_bias_pin : "VNB";`
 ```
 sed -i 's/related_bias_pin : "VPB";/related_bias_pin : "VNBTEMP";/g' sky130_fd_sc_hd__tt_025C_1v80.lib
