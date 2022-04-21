@@ -25,6 +25,8 @@ stdcells.v
 
 All of the steps below are automated by scripts in their respective folders. The python and/or shell script can be modified to automate hotfixes as the sky130A pdk is updated.
 
+Running `make all` will build the entire adk.
+
 # Steps
 1. Edit the environment variables in `setenv.csh` to point to the top folder of your PDK repository and open_pdks (or volare) generated sky130A files.
 2. `make rtk_lef` copies the technology lef file into `rtk-tech.lef`. LEF generation in Innovus requires an OVERLAP layer, and a cut layer is required between the non-routing layers (nwell/pwell/poly) and local interconnect. `generate_rtk_lef/generate_rtk_lef.sh` performs the hotfixes documented here: https://github.com/google/skywater-pdk-libs-sky130_fd_sc_hd/pull/5.
