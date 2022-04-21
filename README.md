@@ -31,7 +31,7 @@ Running `make all` will build the entire adk.
 1. Edit the environment variables in `setenv.csh` to point to the top folder of your PDK repository and open_pdks (or volare) generated sky130A files.
 2. `make rtk_lef` copies the technology lef file into `rtk-tech.lef`. LEF generation in Innovus requires an OVERLAP layer, and a cut layer is required between the non-routing layers (nwell/pwell/poly) and local interconnect. `generate_rtk_lef/generate_rtk_lef.sh` performs the hotfixes documented here: https://github.com/google/skywater-pdk-libs-sky130_fd_sc_hd/pull/5.
 3. `make captable` creates `rtk-typical.captable`. This takes several hours!
-4. `make lib` copies the typical lib file from open_pdks`. Note that the copied lib file does not work out-of-box with the commercial tools. Hotfixes are documented in the `generate_lib` folder's `README.md`.
+4. `make lib` copies the typical lib file from open_pdks. Note that the copied lib file does not work out-of-box with the commercial tools. Hotfixes are documented in the `generate_lib` folder's `README.md`.
 5. `make sc_lef` generates `stdcells.lef` by copying the open_pdks version.
 6. `make spi` generates `stdcells.spi` by copying the open_pdks version.
 7. `make cdl` generates `stdcells.cdl` by copying the open_pdks version.
