@@ -1,16 +1,3 @@
 *.pyc
 *.log*
-*.coyote.*
-*.captable
-*.db
-*.lib
-*Milkyway.*
-*rtk-tech.lef.*
-*.tf
 *.sum
-*stdcells.lef.defineVarRoute.tcl
-*stdcells.mwlib*
-*.lef
-*.cdl
-*.spi
-*.v
