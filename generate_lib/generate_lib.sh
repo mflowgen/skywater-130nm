@@ -44,9 +44,6 @@ sed -i '82988 a \
             voltage_name : "VNB";\
         }' $lib_file
 
-# Remove sparecell
-sed -i '83101, 83135d' $lib_file
-
 lc_shell -f lc_shell_gen_lib.tcl
 
 cp $lib_file $TOP/generate_db
